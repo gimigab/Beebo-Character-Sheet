@@ -198,7 +198,7 @@ const initial = {
   death:{succ:0,fail:0}
 };
 
-const SAVE_KEY="scheda_rus_v2";
+const SAVE_KEY="scheda_beebo";
 function mod(s){return Math.floor((s-10)/2);}
 function clamp(v,a,b){return Math.max(a,Math.min(b,v));}
 function save(){localStorage.setItem(SAVE_KEY,JSON.stringify(state));}
@@ -356,7 +356,7 @@ el("resetSlots").onclick=()=>{
 el("exportBtn").onclick=()=>{
   const data="data:text/json;charset=utf-8,"+encodeURIComponent(JSON.stringify(state,null,2));
   const a=document.createElement("a");
-  a.href=data; a.download="scheda_rus.json";
+  a.href=data; a.download="scheda_beebo.json";
   document.body.appendChild(a); a.click(); a.remove();
 };
 el("importBtn").onclick=()=>el("importFile").click();
